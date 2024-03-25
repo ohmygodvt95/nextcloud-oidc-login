@@ -4,12 +4,12 @@ namespace OCA\OIDCLogin\Provider;
 
 require_once __DIR__.'/../../3rdparty/autoload.php';
 
-use Jumbojett\OpenIDConnectClient;
+use Jumbojett\OpenIDConnectClient as OIDCClient;
 use Jumbojett\OpenIDConnectClientException;
 use OCP\IConfig;
 use OCP\ISession;
 
-class OpenIDConnectClient extends OpenIDConnectClient
+class OpenIDConnectClient extends OIDCClient
 {
     // Keycloak uses a default of 86400 seconds (1 day) as caching time for public keys
     // https://www.keycloak.org/docs/latest/securing_apps/index.html#_java_adapter_config
